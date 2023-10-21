@@ -1,0 +1,40 @@
+{
+    "name": "burtds/cash-converter",
+    "description": "A simple cash converter package for Laravel.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Burtds\\CashConverter\\": "src/",
+            "Burtds\\CashConverter\\Tests": "src/tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bert De Swaef",
+            "email": "bert@bert.gent"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0",
+        "guzzlehttp/guzzle": "7.9.x-dev"
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Burtds\\CashConverter\\Providers\\CashConverterProvider"
+          ],
+          "aliases": {
+            "CashConverter": "Burtds\\CashConverter\\Convert"
+          }
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "2.x-dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
