@@ -18,7 +18,13 @@ php artisan vendor:publish --provider="Burtds\CashConverter\Providers\CashConver
 
 ### Usage
 
-First of all import the mail class of this package on top of your file.
+First of all we'll add the API key of the service we're using to our `.env` file of our project.
+If you don't have an account yet on [exchangerate-api.com](https://exchangerate-api.com), you should create one.
+Once you have an account you can copy your API key from the dashboard page and put it into you `.env` file.
+```
+BURTDS_CONVERT_API_KEY="YOUR-API-KEY"
+```
+We'll need to import the class of this package on top of your file.
 ```php
 use Burtds\CashConverter\MoneyTime;
 ```
