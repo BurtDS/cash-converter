@@ -13,7 +13,7 @@ composer require burtds/cash-converter
 ```
 Afterwords, we'll need to publish the service provider.
 ```bash
-    php artisan vendor:publish --provider="Burtds\CashConverter\Providers\CashConverterProvider"
+php artisan vendor:publish --provider="Burtds\CashConverter\Providers\CashConverterProvider"
 ```
 
 ### Usage
