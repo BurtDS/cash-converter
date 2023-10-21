@@ -22,7 +22,7 @@ First of all import the mail class of this package on top of your file.
 ```php
 use Burtds\CashConverter\MoneyTime;
 ```
-Once that is done, you'll be able to use the conversion functions
+Once that is done, you'll be able to use the conversion functions.
 ```php
 $moneyTime = new MoneyTime();
 $moneyTime->getRates('EUR'); // returns an array of the currenct converison rates based on the given currency, in this case Euro's
@@ -32,7 +32,7 @@ $moneyTime->convert('EUR', 'USD', 25); // returns the converted vanlue in US Dol
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this package, please send me an e-mail via [bert@bert.gent](mailto:bert@bert.gent). I'll get get back at you as soon as possible.
+If you discover a security vulnerability within this package, please send me an e-mail via [bert@bert.gent](mailto:bert@bert.gent). I'll get back at you as soon as possible.
 
 ## Credits
 
