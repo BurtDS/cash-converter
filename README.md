@@ -50,7 +50,7 @@ I'll get back at you as soon as possible.
 - [Bert De Swaef](https://github.com/burtds)
 - [All Contributors](../../contributors)
 
-And u huge thanks to [Freek Van der Herten](https://github.com/freekmurze) for guidence.
+And u huge thanks to [Freek Van der Herten](https://github.com/freekmurze) for guidance.
 
 ## License
 
