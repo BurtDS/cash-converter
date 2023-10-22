@@ -1,6 +1,6 @@
 ## About cash-converter
 
-A small & simple package, but takes away the pain of communicating with an API directly to convert an certain amount of cash between 2 currencies. 
+A small & simple package, but takes away the pain of communicating with an API directly to convert a certain amount of cash between 2 currencies. 
 You can also get the conversion rate or an array with all known conversion rates based on a certain currency.
 
 ## How to use cash-converter
