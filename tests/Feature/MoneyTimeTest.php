@@ -5,6 +5,7 @@ use Burtds\CashConverter\MoneyTime;
 it('can grab a an array of all conversion rates based on a given currency', function () {
     $moneyTime = new MoneyTime();
     $rates = $moneyTime->getRates('EUR');
+
     expect($rates)->toBeArray();
 });
 

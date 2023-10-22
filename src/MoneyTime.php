@@ -70,8 +70,10 @@ class MoneyTime
 
         // Perform call
         $api = new Api();
-        $rates = $api->grabRates($fromCurrency);
 
+        //TODO check for invalid key error
+        $rates = $api->grabRates($fromCurrency);
+ray($rates);
         // Return the resulted rates
         return $rates['conversion_rates'];
     }

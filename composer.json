@@ -16,16 +16,14 @@
     ],
     "require": {
         "php": "^8.0",
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.9",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "extra": {
         "laravel": {
           "providers": [
-            "Burtds\\CashConverter\\Providers\\CashConverterProvider"
-          ],
-          "aliases": {
-            "CashConverter": "Burtds\\CashConverter\\Convert"
-          }
+            "Burtds\\CashConverter\\Providers\\CashConverterServiceProvider"
+          ]
         }
     },
     "require-dev": {
