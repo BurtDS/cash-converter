@@ -1,11 +1,5 @@
 <?php
 
-test('example', function () {
-    expect(true)->toBeTrue();
-});
-
-
-
 use Burtds\CashConverter\MoneyTime;
 
 it('can grab a an array of all conversion rates based on a given currency', function () {
