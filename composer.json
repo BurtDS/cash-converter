@@ -13,10 +13,9 @@
             "email": "bert@bert.gent"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=8.0",
-        "guzzlehttp/guzzle": "7.9.x-dev"
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.9"
     },
     "extra": {
         "laravel": {
@@ -29,11 +28,14 @@
         }
     },
     "require-dev": {
-        "pestphp/pest": "2.x-dev"
+        "pestphp/pest": "^2.0",
+        "orchestra/testbench": "^8.13"
     },
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
