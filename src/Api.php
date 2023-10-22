@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Http;
 
 class Api
 {
-    private const BASE_URL = "https://v6.exchangerate-api.com/v6/";
+    protected const BASE_URL = "https://v6.exchangerate-api.com/v6/";
 
     /**
      * Concatinating the url, based on the base URL of the servce.
