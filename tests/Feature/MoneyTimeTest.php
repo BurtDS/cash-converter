@@ -15,9 +15,9 @@ it('can grab a single conversion rate based on a given currency', function () {
 });
 
 it('can convert money from one currency to another', function () {
-    $rate = CashConverter::getRate('EUR', 'USD', 100);
+    $amount = CashConverter::convert('EUR', 'USD', 100);
 
-    expect($rate)->toBeFloat();
+    expect($amount)->toBeFloat();
 });
 
 it("cannot convert an non-existing currency", function (array $arguments) {
