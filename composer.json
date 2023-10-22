@@ -15,10 +15,9 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": ">=8.0",
         "guzzlehttp/guzzle": "^7.9",
-        "spatie/laravel-package-tools": "^1.16",
-        "php": ">=8.0"
+        "spatie/laravel-package-tools": "^1.16"
     },
     "extra": {
         "laravel": {
