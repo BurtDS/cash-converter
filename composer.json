@@ -30,7 +30,8 @@
     },
     "require-dev": {
         "pestphp/pest": "^2.0",
-        "orchestra/testbench": "^8.13"
+        "orchestra/testbench": "^8.13",
+        "spatie/laravel-ray": "^1.33"
     },
     "config": {
         "allow-plugins": {
