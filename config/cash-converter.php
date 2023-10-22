@@ -9,5 +9,5 @@ return [
     | Define your API key here.
     |
     */
-    'api_key' => env('EXCHANGE_RATE_API_KEY'),
+    'exchange_rate_api_key' => env('EXCHANGE_RATE_API_KEY'),
 ];

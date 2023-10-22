@@ -3,12 +3,17 @@
 namespace Burtds\CashConverter;
 
 use Exception;
-use Burtds\CashConverter\Api;
+use Burtds\CashConverter\ExchangeRateApi;
 use Burtds\CashConverter\Validator;
 use Illuminate\Support\Facades\Http;
 
 class MoneyTime
 {
+    public function __construct(protected ExchangeRateApi $api)
+    {
+
+    }
+
     /**
      * Converting a given amount of "money", from one currency to another.
      *
@@ -47,13 +52,9 @@ class MoneyTime
         $this->checkCurrency($fromCurrency);
         $this->checkCurrency($toCurrency);
 
-        // Perform call
-        $api = new Api();
-        $rates = $api->grabRates($fromCurrency);
-        $rate = $rates['conversion_rates'][$toCurrency];
+        $rates = $this->api->rates($fromCurrency);
 
-        // Return the resulted rate
-        return $rate;
+        return $rates->forCurrency($toCurrency);
     }
 
     /**
@@ -68,14 +69,11 @@ class MoneyTime
         // Check validity of the currency
         $this->checkCurrency($fromCurrency);
 
-        // Perform call
-        $api = new Api();
-
         //TODO check for invalid key error
-        $rates = $api->grabRates($fromCurrency);
-ray($rates);
+        $rates = $this->api->rates($fromCurrency);
+
         // Return the resulted rates
-        return $rates['conversion_rates'];
+        return $rates->all();
     }
 
     /**

@@ -1,37 +1,29 @@
 <?php
 
-use Burtds\CashConverter\MoneyTime;
+use Burtds\CashConverter\Facades\CashConverter;
 
 it('can grab a an array of all conversion rates based on a given currency', function () {
-    $moneyTime = new MoneyTime();
-    $rates = $moneyTime->getRates('EUR');
+    $rates = CashConverter::getRates('EUR');
 
     expect($rates)->toBeArray();
 });
 
 it('can grab a single conversion rate based on a given currency', function () {
-    $moneyTime = new MoneyTime();
-    $rate = $moneyTime->getRate('EUR', 'USD');
+    $rate = CashConverter::getRate('EUR', 'USD');
+
     expect($rate)->toBeFloat();
 });
 
 it('can convert money from one currency to another', function () {
-    $moneyTime = new MoneyTime();
-    $amount = $moneyTime->convert('EUR', 'USD', 100);
-    expect($amount)->toBeFloat();
+    $rate = CashConverter::getRate('EUR', 'USD', 100);
+
+    expect($rate)->toBeFloat();
 });
 
-it('can\'t convert an inexisting currecy', function () {
-    $moneyTime = new MoneyTime();
-    $rate = $moneyTime->getRates('XYZ');
-})->throws(Exception::class);
+it("cannot convert an non-existing currency", function (array $arguments) {
 
-it('can\'t convert an inexisting currecy to a known one', function () {
-    $moneyTime = new MoneyTime();
-    $rate = $moneyTime->getRate('XYZ', 'USD');
-})->throws(Exception::class);
-
-it('can\'t convert an known currnecy to an unknown one', function () {
-    $moneyTime = new MoneyTime();
-    $rate = $moneyTime->getRate('USD', 'XYZ');
-})->throws(Exception::class);
+    CashConverter::getRate(...$arguments);
+})->with([
+    [['invalid-currency', 'USD']],
+    [['USD', 'invalid-currency']],
+])->throws(Exception::class);
