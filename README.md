@@ -29,16 +29,15 @@ Once you have an account you can copy your API key from the dashboard page and p
 ```
 EXCHANGE_RATE_API_KEY="YOUR-API-KEY"
 ```
-We'll need to import the class of this package on top of your file.
+We'll need to import the Facade of this package on top of your file.
 ```php
-use Burtds\CashConverter\MoneyTime;
+use Burtds\CashConverter\Facades\CashConverter;
 ```
 Once that is done, you'll be able to use the conversion functions.
 ```php
-$moneyTime = new MoneyTime();
-$moneyTime->getRates('EUR'); // returns an array of the currenct converison rates based on the given currency, in this case Euro's
-$moneyTime->getRate('EUR', 'USD'); // returns the currenct conversion rate for Euro to US Dollars
-$moneyTime->convert('EUR', 'USD', 25); // returns the converted vanlue in US Dollars for the given 25 Euros
+CashConverter::getRates('EUR'); // returns an array of the currenct converison rates based on the given currency, in this case Euro's
+CashConverter::getRate('EUR','USD'); // returns the currenct conversion rate for Euro to US Dollars
+CashConverter::convert('EUR','USD', 25); // returns the converted vanlue in US Dollars for the given 25 Euros
 ```
 
 ## Security Vulnerabilities
