@@ -1,3 +1,9 @@
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/burtds/cash-converter.svg?style=flat-square)](https://packagist.org/packages/burtds/cash-converter)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/burtds/cash-converter/run-tests.yml?branch=main&label=Tests)](https://github.com/burtds/cash-converter/actions/workflows/run-tests.yml)
+[![Check & fix styling](https://github.com/spatie/laravel-activitylog/workflows/Check%20&%20fix%20styling/badge.svg)](https://github.com/burtds/cash-converter/actions/workflows/php-cs-fixer.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/burtds/cash-converter.svg?style=flat-square)](https://packagist.org/packages/burtds/cash-converter)
+
 ## About cash-converter
 
 A small & simple package, but takes away the pain of communicating with an API directly to convert a certain amount of cash between 2 currencies. 
@@ -22,7 +28,7 @@ First of all we'll add the API key of the service we're using to our `.env` file
 If you don't have an account yet on [exchangerate-api.com](https://exchangerate-api.com), you should create one.
 Once you have an account you can copy your API key from the dashboard page and put it into you `.env` file.
 ```
-BURTDS_CONVERT_API_KEY="YOUR-API-KEY"
+EXCHANGE_RATE_API_KEY="YOUR-API-KEY"
 ```
 We'll need to import the class of this package on top of your file.
 ```php
