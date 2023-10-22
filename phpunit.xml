@@ -19,6 +19,6 @@
         <!-- ... other configuration settings ... -->
         <server name="APP_ENV" value="testing"/>
         <server name="APP_DEBUG" value="true"/>
-        <server name="BURTDS_CONVERT_API_KEY" value="d32a3a3c8c28056b84ffa0e8"/>
+        <server name="EXCHANGE_RATE_API_KEY" value="d32a3a3c8c28056b84ffa0e8"/>
     </php>
 </phpunit>
