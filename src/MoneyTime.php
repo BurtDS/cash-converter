@@ -12,7 +12,6 @@ class MoneyTime
     /**
      * Converting a given amount of "money", from one currency to another.
      *
-     * @param  string  $amount
      * @return float
      */
     public function convert(string $fromCurrency, string $toCurrency, float $amount)
@@ -29,7 +28,6 @@ class MoneyTime
 
     /**
      * Collecting the current exchange rate between 2 currencies.
-     *
      *
      * @return float
      */
