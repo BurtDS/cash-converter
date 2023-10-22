@@ -1,7 +1,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/burtds/cash-converter.svg?style=flat-square)](https://packagist.org/packages/burtds/cash-converter)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/burtds/cash-converter/run-tests.yml?branch=main&label=Tests)](https://github.com/burtds/cash-converter/actions/workflows/run-tests.yml)
-[![Check & fix styling](https://github.com/spatie/laravel-activitylog/workflows/Check%20&%20fix%20styling/badge.svg)](https://github.com/burtds/cash-converter/actions/workflows/php-cs-fixer.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/burtds/cash-converter/run-tests-pest.yml?branch=main&label=Tests)](https://github.com/burtds/cash-converter/actions/workflows/run-tests-pest.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/burtds/cash-converter.svg?style=flat-square)](https://packagist.org/packages/burtds/cash-converter)
 
 ## About cash-converter
@@ -19,7 +18,7 @@ composer require burtds/cash-converter
 ```
 Afterwords, we'll need to publish the service provider.
 ```bash
-php artisan vendor:publish --provider="Burtds\CashConverter\Providers\CashConverterProvider"
+php artisan vendor:publish --provider="Burtds\CashConverter\CashConverterProvider"
 ```
 
 ### Usage
@@ -44,7 +43,8 @@ $moneyTime->convert('EUR', 'USD', 25); // returns the converted vanlue in US Dol
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this package, please send me an e-mail via [bert@bert.gent](mailto:bert@bert.gent). I'll get back at you as soon as possible.
+If you discover a security vulnerability within this package, please send me an e-mail via [bert@bert.gent](mailto:bert@bert.gent). 
+I'll get back at you as soon as possible.
 
 ## Credits
 
