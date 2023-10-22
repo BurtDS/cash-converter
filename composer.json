@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
           "providers": [
-            "Burtds\\CashConverter\\Providers\\CashConverterServiceProvider"
+            "Burtds\\CashConverter\\CashConverterServiceProvider"
           ]
         }
     },
