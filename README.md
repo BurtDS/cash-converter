@@ -12,7 +12,7 @@ You can also get the conversion rate or an array with all known conversion rates
 
 ### Installation
 
-You can install the package via composer: (this package still needs to be added to Packagist for this to work.)
+You can install the package via composer:
 ```bash
 composer require burtds/cash-converter
 ```
