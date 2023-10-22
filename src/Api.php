@@ -9,7 +9,7 @@ class Api
     protected const BASE_URL = "https://v6.exchangerate-api.com/v6/";
 
     /**
-     * Concatinating the url, based on the base URL of the servce.
+     * Concatenating the url, based on the base URL of the service.
      * Returning a json object of the response.
      *
      * @param  string  $base
