@@ -1,4 +1,4 @@
 
 /vendor
 .env.testing
-
+composer.lock
