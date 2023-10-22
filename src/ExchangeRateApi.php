@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Http;
 
 class ExchangeRateApi
 {
-
     public function __construct(protected string $apiKey)
     {
     }
@@ -21,6 +20,4 @@ class ExchangeRateApi
 
         return new Rate($rawExchangeRates, $currency);
     }
-
-
 }

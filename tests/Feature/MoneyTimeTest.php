@@ -20,7 +20,7 @@ it('can convert money from one currency to another', function () {
     expect($amount)->toBeFloat();
 });
 
-it("cannot convert an non-existing currency", function (array $arguments) {
+it('cannot convert an non-existing currency', function (array $arguments) {
 
     CashConverter::getRate(...$arguments);
 })->with([

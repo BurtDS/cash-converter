@@ -167,7 +167,7 @@ class Validator
         'YER',
         'ZAR',
         'ZMW',
-        'ZWL'
+        'ZWL',
     ];
 
     public function __construct()
@@ -179,7 +179,6 @@ class Validator
      * Checking weither a given currency is a known currency,
      * based on the $currencies array.
      *
-     * @param  string  $currency
      *
      * @return bool
      */
@@ -187,5 +186,4 @@ class Validator
     {
         return (in_array($currency, $this->currencies, true)) ? true : throw CurrencyNotSupported::make($currency);
     }
-
 }

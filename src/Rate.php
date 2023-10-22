@@ -2,8 +2,6 @@
 
 namespace Burtds\CashConverter;
 
-use Burtds\CashConverter\Exceptions\CurrencyNotFound;
-
 class Rate
 {
     public function __construct(public array $values, protected string $baseCurrency)
