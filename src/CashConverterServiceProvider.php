@@ -19,14 +19,19 @@ class CashConverterServiceProvider extends PackageServiceProvider
     {
         $this->app->bind(ExchangeRateApi::class, function() {
            $apiKey = config('cash-converter.exchange_rate_api_key');
-            
+
             return new ExchangeRateApi($apiKey);
         });
+        $this->app->bind(Validator::class, function() {
+
+            return new Validator();
+         });
 
         $this->app->bind(CashConverter::class, function() {
             $api = app(ExchangeRateApi::class);
+            $validator = app(Validator::class);
 
-            return new MoneyTime($api);
+            return new MoneyTime($api, $validator);
         });
     }
 }

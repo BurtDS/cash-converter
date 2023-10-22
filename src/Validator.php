@@ -2,6 +2,8 @@
 
 namespace Burtds\CashConverter;
 
+use Burtds\CashConverter\Exceptions\CurrencyNotSupported;
+
 class Validator
 {
     public array $currencies = [
@@ -168,6 +170,11 @@ class Validator
         'ZWL'
     ];
 
+    public function __construct()
+    {
+
+    }
+
     /**
      * Checking weither a given currency is a known currency,
      * based on the $currencies array.
@@ -178,7 +185,7 @@ class Validator
      */
     public function isExistingCurrency(string $currency)
     {
-        return in_array($currency, $this->currencies, true);
+        return (in_array($currency, $this->currencies, true)) ? true : throw CurrencyNotSupported::make($currency);
     }
 
 }

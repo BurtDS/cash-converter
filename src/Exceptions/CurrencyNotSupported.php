@@ -4,10 +4,10 @@ namespace Burtds\CashConverter\Exceptions;
 
 use Exception;
 
-class CurrencyNotFound extends Exception
+class CurrencyNotSupported extends Exception
 {
     public static function make(string $currency)
     {
-        return new static("Currency `{$currency}` not found");
+        return new static("Given currency `{$currency}` is not supported");
     }
 }

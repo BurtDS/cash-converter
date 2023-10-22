@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Http;
 
 class MoneyTime
 {
-    public function __construct(protected ExchangeRateApi $api)
+    public function __construct(protected ExchangeRateApi $api, protected Validator $validator)
     {
 
     }
@@ -49,8 +49,8 @@ class MoneyTime
         // We're simulating this by using the getRates endpoint an grabbing the needed target currency.
 
         // Check validity of the currencies
-        $this->checkCurrency($fromCurrency);
-        $this->checkCurrency($toCurrency);
+        $this->validator->isExistingCurrency($fromCurrency);
+        $this->validator->isExistingCurrency($toCurrency);
 
         $rates = $this->api->rates($fromCurrency);
 
@@ -67,28 +67,13 @@ class MoneyTime
     public function getRates(string $fromCurrency)
     {
         // Check validity of the currency
-        $this->checkCurrency($fromCurrency);
+        $this->validator->isExistingCurrency($fromCurrency);
 
         //TODO check for invalid key error
         $rates = $this->api->rates($fromCurrency);
 
         // Return the resulted rates
         return $rates->all();
-    }
-
-    /**
-     * Checking weither a currency excists.
-     *
-     * @param  string  $currency
-     *
-     * @throws Exception
-     */
-    private function checkCurrency($currency)
-    {
-        $validator = new Validator();
-        if (! $validator->isExistingCurrency($currency)) {
-            throw new Exception('Given currency "'.$currency.'" is not supported.');
-        }
     }
 
 }
