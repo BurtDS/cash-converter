@@ -2,6 +2,10 @@
 
 All notable changes to `burtds/cash-converter` will be documented in this file
 
+## 1.0.3 - 2023-10-24
+
+- Downgrade the guzzle dependency
+
 ## 1.0.2 - 2023-10-23
 
 - Move Laravel Pint to the dev dependencies
