@@ -40,6 +40,16 @@ CashConverter::getRate('EUR','USD'); // returns the currenct conversion rate for
 CashConverter::convert('EUR','USD', 25); // returns the converted vanlue in US Dollars for the given 25 Euros
 ```
 
+### Test & Format
+For testing you can run:
+```bash
+composer test
+```
+For formatting the code using pint you can run:
+```bash
+composer format
+```
+
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within this package, please send me an e-mail via [bert@bert.gent](mailto:bert@bert.gent). 
@@ -50,7 +60,7 @@ I'll get back at you as soon as possible.
 - [Bert De Swaef](https://github.com/burtds)
 - [All Contributors](../../contributors)
 
-And u huge thanks to [Freek Van der Herten](https://github.com/freekmurze) for guidance.
+And u huge thanks to [Freek Van der Herten](https://github.com/freekmurze) for the guidance.
 
 ## License
 
