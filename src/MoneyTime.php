@@ -56,7 +56,7 @@ class MoneyTime
         // Check validity of the currency
         $this->validator->isExistingCurrency($fromCurrency);
 
-        //TODO check for invalid key error
+        // Perform call to remote service
         $rates = $this->api->rates($fromCurrency);
 
         // Return the resulted rates

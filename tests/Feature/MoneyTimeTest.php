@@ -27,3 +27,9 @@ it('cannot convert an non-existing currency', function (array $arguments) {
     [['invalid-currency', 'USD']],
     [['USD', 'invalid-currency']],
 ])->throws(Exception::class);
+
+it('cannot use an invalid API key', function () {
+    config()->set($key, 'this_is_a_fake');
+    $amount = CashConverter::convert('EUR', 'USD', 100);
+})->throws(Exception::class);
+
