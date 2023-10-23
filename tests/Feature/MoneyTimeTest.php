@@ -32,4 +32,3 @@ it('cannot use an invalid API key', function () {
     config()->set($key, 'this_is_a_fake');
     $amount = CashConverter::convert('EUR', 'USD', 100);
 })->throws(Exception::class);
-

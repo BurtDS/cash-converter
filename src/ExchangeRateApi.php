@@ -2,7 +2,6 @@
 
 namespace Burtds\CashConverter;
 
-use ray;
 use Illuminate\Support\Facades\Http;
 
 class ExchangeRateApi
@@ -20,13 +19,12 @@ class ExchangeRateApi
         $rawExchangeRates = $response->json();
 
         if ($rawExchangeRates['result'] !== 'success') {
-            throw match($rawExchangeRates['error-type']){
+            throw match ($rawExchangeRates['error-type']) {
                 'invalid-key' => InvalidKey::make(),
                 'inactive-account' => InactiveAccount::make(),
                 'quota-reached' => QuotaReached::make(),
             };
         }
-
 
         return new Rate($rawExchangeRates, $currency);
     }
