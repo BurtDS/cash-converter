@@ -5,62 +5,74 @@
 
 ## About cash-converter
 
-A small & simple package, but takes away the pain of communicating with an API directly to convert a certain amount of cash between 2 currencies. 
+A small and simple package that takes away the pain of communicating with ExchangeRate-API directly to convert a certain amount of money between 2 currencies. 
 You can also get the conversion rate or an array with all known conversion rates based on a certain currency.
 
 ## How to use cash-converter
 
 ### Installation
 
-You can install the package via composer:
+Install the package via composer:
+
 ```bash
 composer require burtds/cash-converter
 ```
-Afterwords, we'll need to publish the service provider.
+
+Afterwards, publish the service provider.
+
 ```bash
 php artisan vendor:publish --provider="Burtds\CashConverter\CashConverterProvider"
 ```
 
 ### Usage
 
-First of all we'll add the API key of the service we're using to our `.env` file of our project.
-If you don't have an account yet on [exchangerate-api.com](https://exchangerate-api.com), you should create one.
-Once you have an account you can copy your API key from the dashboard page and put it into you `.env` file.
+First of all add the API key of the ExchangeRate-API service to your `.env` file of your project.
+If you don't have an ExchangeRate-API account yet, create one at [exchangerate-api.com](https://exchangerate-api.com).
+Once you have an account you can copy your API key from the dashboard page and put it into your `.env` file.
+
 ```
 EXCHANGE_RATE_API_KEY="YOUR-API-KEY"
 ```
-We'll need to import the Facade of this package on top of your file.
+
+To use it, import the Facade of this package at the top of your file.
+
 ```php
 use Burtds\CashConverter\Facades\CashConverter;
 ```
-Once that is done, you'll be able to use the conversion functions.
+
+Once that is done, you can use the conversion functions.
+
 ```php
-CashConverter::getRates('EUR'); // returns an array of the currenct converison rates based on the given currency, in this case Euro's
-CashConverter::getRate('EUR','USD'); // returns the currenct conversion rate for Euro to US Dollars
-CashConverter::convert('EUR','USD', 25); // returns the converted vanlue in US Dollars for the given 25 Euros
+CashConverter::getRates('EUR'); // returns an array of the currenct conversion rates based on the given currency, in this case Euro
+CashConverter::getRate('EUR','USD'); // returns the current conversion rate for Euro to US Dollars
+CashConverter::convert('EUR','USD', 25); // returns the converted vanlue in US Dollars for the given 25 Euro
 ```
 
 ### Test & Format
-For testing you can run:
+
+To execute the tests, run:
+
 ```bash
 composer test
 ```
-For formatting the code using pint you can run:
+
+To format the code using pint, run:
+
 ```bash
 composer format
 ```
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this package, please send me an e-mail via [bert@bert.gent](mailto:bert@bert.gent). 
-I'll get back at you as soon as possible.
+If you discover a security vulnerability within this package, please send me an email via [bert@bert.gent](mailto:bert@bert.gent). 
+I'll get back to you as soon as possible.
 
 ## Credits
 
 - [Bert De Swaef](https://github.com/burtds)
 - [All Contributors](../../contributors)
 
-And u huge thanks to [Freek Van der Herten](https://github.com/freekmurze) for the guidance.
+And a huge thanks to [Freek Van der Herten](https://github.com/freekmurze) for the guidance.
 
 ## License
 
