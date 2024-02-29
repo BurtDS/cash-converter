@@ -2,6 +2,10 @@
 
 All notable changes to `burtds/cash-converter` will be documented in this file
 
+## 1.0.4 - 2024-02-29
+
+- Added PHP 8.3 tests & support
+
 ## 1.0.3 - 2023-10-24
 
 - Downgrade the guzzle dependency
