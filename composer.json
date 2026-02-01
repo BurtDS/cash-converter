@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Burtds\\CashConverter\\": "src/",
+            "Burtds\\CashConverter\\": "src/"
         }
     },
     "autoload-dev": {
