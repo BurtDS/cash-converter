@@ -49,7 +49,7 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-       - name: Install dependencies
+      - name: Install dependencies
         run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --with="illuminate/contract:^${{ matrix.laravel }}"
 
       - name: Execute tests
