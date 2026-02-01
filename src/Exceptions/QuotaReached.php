@@ -4,7 +4,7 @@ namespace Burtds\CashConverter\Exceptions;
 
 use Exception;
 
-class InactiveAccount extends Exception
+class QuotaReached extends Exception
 {
     public static function make()
     {
