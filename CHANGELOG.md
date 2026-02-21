@@ -2,7 +2,11 @@
 
 All notable changes to `burtds/cash-converter` will be documented in this file
 
-## 1.0.4 - 2024-02-29
+## 1.0.5 - 2026-02-21
+
+- Add Laravel 13 support
+
+## 1.0.4 - 2026-02-02
 
 - Added PHP 8.4, PHP 8.5 & Laravel 11, Laravel 12 support
 
