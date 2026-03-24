@@ -2,6 +2,10 @@
 
 All notable changes to `burtds/cash-converter` will be documented in this file
 
+## 1.0.7 - 2026-03-24
+
+- Updated orchestra
+
 ## 1.0.6 - 2026-02-21
 
 - Add Laravel 13 support
